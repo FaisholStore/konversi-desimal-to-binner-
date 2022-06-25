@@ -1,32 +1,49 @@
-# Prerequisites
-*.d
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+  cout << "##  Program C++ Konversi Desimal ke Biner ##" << endl;
+  cout << "============================================" << endl;
+  cout << endl;
+ 
+  
+  int x[10], sisa, y;
+	cout << "------------------------------------" << endl;
+	cout << " PROGRAM KONVERSI SISTEM BILANGAN" << endl;
+	cout << "------------------------------------" << endl;
+	cout << " | 1. Desimal      ke Biner        |" << endl;
+	cout << " | 2. Desimal      ke Oktal        |" << endl;
+	cout << " | 3. Desimal      ke Heksadesimal |" << endl;
+	cout << " | 4. Biner        ke Desimal      |" << endl;
+	cout << " | 5. Oktal        ke Desimal      |" << endl;
+	cout << " | 6. Heksadesimal ke Desimal      |" << endl;
+	cout << "------------------------------------" << endl;
+	cout << "Masukkan Angka: ";
+	cin  >> y;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+	//Desimal ke Biner
+	if (y==1){
+	cout << "-------------------------" << endl;
+	cout << "Konversi Desimal ke Biner" << endl;
+	cout << "-------------------------" << endl;
+	cout << "Bilangan Desimal: ";
+	cin  >> x[10];
+	cout << endl; 
+	
+  for(int i=-1; x[10]>=i; i--)
+  {
+	sisa = x[10] % 2;
+	x[10] /= 2; 
+	cout << "Bilangan Biner: " << sisa << endl;
+	if(x[10]==0){
+		break;
+	}
+	}
+}
+ 
+  
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+  return 0;
+}
